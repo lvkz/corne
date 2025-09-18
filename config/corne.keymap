@@ -65,10 +65,10 @@
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &none        &kp F9  &kp F8  &kp F7  &kp F12    &kp LC(HOME)      &kp INS          &kp HOME         &kp PAGE_UP      &kp LC(RIGHT)      &kp DEL
-&none          &kp LG(DEL)  &kp F6  &kp F5  &kp F4  &kp F11    &kp LC(LS(LEFT))  &kp LC(LA(F13))  &kp LC(LA(F14))  &kp LC(LA(F15))  &kp LC(LS(RIGHT))  &kp LC(LA(DEL))
-&kp LC(LS(T))  &none        &kp F3  &kp F2  &kp F1  &kp F10    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
-                                    &none   &none   &none      &none             &none            &none
+&kp LC(LG(Q))  &none              &kp F9  &kp F8  &kp F7  &kp F12    &kp LC(HOME)      &kp INS          &kp HOME         &kp PAGE_UP      &kp LC(RIGHT)      &kp DEL
+&none          &kp LG(BACKSPACE)  &kp F6  &kp F5  &kp F4  &kp F11    &kp LC(LS(LEFT))  &kp LC(LA(F13))  &kp LC(LA(F14))  &kp LC(LA(F15))  &kp LC(LS(RIGHT))  &kp LC(LA(DEL))
+&kp LC(LS(T))  &none              &kp F3  &kp F2  &kp F1  &kp F10    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
+                                          &none   &none   &none      &none             &none            &none
             >;
 
             label = "Function";
