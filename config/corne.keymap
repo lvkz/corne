@@ -30,6 +30,13 @@
             bindings = <&kp LC(SPACE) &kp X>;
             label = "CLOSE_PANE";
         };
+
+        tmux: goto_pane_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE)>;
+            label = "GOTO_PANE_1";
+        };
     };
 
     keymap {
@@ -81,7 +88,7 @@
             bindings = <
 &kp TAB    &none  &kp C_VOLUME_UP  &kp K_MUTE        &kp C_VOL_UP  &panesplit_v    &kp KP_NUMBER_0  &kp DOLLAR               &none       &none         &none  &kp BSPC
 &kp LCTRL  &none  &kp K_PREV       &kp K_PLAY_PAUSE  &kp K_NEXT    &panesplit_h    &kp LEFT         &kp DOWN                 &kp UP      &kp RIGHT     &none  &none
-&kp LSHFT  &none  &none            &none             &none         &pane_close     &kp LC(SPACE)    &kp LS(LG(KP_NUMBER_4))  &kp LC(UP)  &kp LC(DOWN)  &none  &trans
+&kp LSHFT  &none  &none            &none             &tmux         &pane_close     &kp LC(SPACE)    &kp LS(LG(KP_NUMBER_4))  &kp LC(UP)  &kp LC(DOWN)  &none  &trans
                                    &kp LGUI          &trans        &trans          &trans           &mo 3                    &kp RALT
             >;
         };
