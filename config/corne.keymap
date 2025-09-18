@@ -9,6 +9,29 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        panesplit_v: split_vertically {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp LS(BSLH)>;
+            label = "SPLIT_VERTICALLY";
+        };
+
+        panesplit_h: split_horizontally {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp MINUS>;
+            label = "SPLIT_HORIZONTALLY";
+        };
+
+        pane_close: close_pane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp X>;
+            label = "CLOSE_PANE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -56,19 +79,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &none  &kp C_VOLUME_UP  &kp K_MUTE        &kp C_VOL_UP  &none            &kp KP_NUMBER_0  &kp DOLLAR               &none       &none         &none  &kp BSPC
-&kp LCTRL  &none  &kp K_PREV       &kp K_PLAY_PAUSE  &kp K_NEXT    &none            &kp LEFT         &kp DOWN                 &kp UP      &kp RIGHT     &none  &none
-&kp LSHFT  &none  &none            &none             &none         &kp LC(LA(C))    &kp LC(SPACE)    &kp LS(LG(KP_NUMBER_4))  &kp LC(UP)  &kp LC(DOWN)  &none  &trans
-                                   &kp LGUI          &trans        &trans           &trans           &mo 3                    &kp RALT
+&kp TAB    &none  &kp C_VOLUME_UP  &kp K_MUTE        &kp C_VOL_UP  &panesplit_v    &kp KP_NUMBER_0  &kp DOLLAR               &none       &none         &none  &kp BSPC
+&kp LCTRL  &none  &kp K_PREV       &kp K_PLAY_PAUSE  &kp K_NEXT    &panesplit_h    &kp LEFT         &kp DOWN                 &kp UP      &kp RIGHT     &none  &none
+&kp LSHFT  &none  &none            &none             &none         &pane_close     &kp LC(SPACE)    &kp LS(LG(KP_NUMBER_4))  &kp LC(UP)  &kp LC(DOWN)  &none  &trans
+                                   &kp LGUI          &trans        &trans          &trans           &mo 3                    &kp RALT
             >;
         };
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &none              &kp F9  &kp F8  &kp F7  &kp F12    &kp LC(HOME)      &kp INS          &kp HOME         &kp PAGE_UP      &kp LC(RIGHT)      &kp DEL
-&none          &kp LG(BACKSPACE)  &kp F6  &kp F5  &kp F4  &kp F11    &kp LC(LS(LEFT))  &kp LC(LA(F13))  &kp LC(LA(F14))  &kp LC(LA(F15))  &kp LC(LS(RIGHT))  &kp LC(LA(DEL))
-&kp LC(LS(T))  &none              &kp F3  &kp F2  &kp F1  &kp F10    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
-                                          &none   &none   &none      &none             &none            &none
+&kp LC(LG(Q))  &kp F12  &kp F11  &kp F10  &kp F9  &kp LC(LA(C))        &kp LC(HOME)      &kp INS          &kp HOME         &kp PAGE_UP      &kp LC(RIGHT)      &kp DEL
+&none          &kp F8   &kp F7   &kp F6   &kp F5  &kp LC(LA(ENTER))    &kp LC(LS(LEFT))  &kp LC(LA(F13))  &kp LC(LA(F14))  &kp LC(LA(F15))  &kp LC(LS(RIGHT))  &kp LC(LA(DEL))
+&kp LC(LS(T))  &kp F4   &kp F3   &kp F2   &kp F1  &kp LG(BACKSPACE)    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
+                                 &none    &none   &none                &none             &none            &none
             >;
 
             label = "Function";
