@@ -42,7 +42,7 @@
 &kp TAB     &kp N1         &kp N2                &kp N3            &kp N4          &kp N5           &kp N6          &kp N7           &kp N8             &kp N9                 &kp N0            &kp BSPC
 &bt BT_CLR  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp BACKSLASH    &kp SLASH       &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
 &kp LSHFT   &kp TILDE      &none                 &none             &none           &kp COMMA        &kp UNDERSCORE  &kp MINUS        &kp PLUS           &kp EQUAL              &none             &kp ESCAPE
-                                                 &kp LGUI          &mo 4           &kp RETURN       &kp SPACE       &trans           &kp RALT
+                                                 &kp LGUI          &trans          &kp RETURN       &kp SPACE       &mo 3            &kp RALT
             >;
         };
 
@@ -59,7 +59,7 @@
 &kp TAB    &none  &kp C_VOLUME_UP  &kp K_MUTE        &kp C_VOL_UP  &none            &kp KP_NUMBER_0  &kp DOLLAR               &none       &none         &none  &kp BSPC
 &kp LCTRL  &none  &kp K_PREV       &kp K_PLAY_PAUSE  &kp K_NEXT    &none            &kp LEFT         &kp DOWN                 &kp UP      &kp RIGHT     &none  &none
 &kp LSHFT  &none  &none            &none             &none         &kp LC(LA(C))    &kp LC(SPACE)    &kp LS(LG(KP_NUMBER_4))  &kp LC(UP)  &kp LC(DOWN)  &none  &none
-                                   &kp LGUI          &none         &kp RET          &kp SPACE        &none                    &kp RALT
+                                   &kp LGUI          &mo 4         &kp RET          &kp SPACE        &trans                   &kp RALT
             >;
         };
 
