@@ -13,7 +13,7 @@
         compatible = "zmk,keymap";
 
         base {
-            display-name = "Default Layer";
+            display-name = "Base";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -70,6 +70,8 @@
 &none  &none  &kp F3  &kp F2  &kp F1  &kp F10    &none             &kp DEL  &kp END   &kp PAGE_DOWN  &none              &none
                       &none   &none   &none      &none             &none    &none
             >;
+
+            label = "Function";
         };
 
         extra_layer {
@@ -79,6 +81,8 @@
 &none       &none         &none         &none         &none         &none           &none  &none  &none  &none  &none  &none
                                         &none         &none         &none           &none  &none  &none
             >;
+
+            label = "Extra";
         };
     };
 };
