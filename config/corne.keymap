@@ -39,7 +39,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1         &kp N2                &kp N3            &kp N4           &kp N5           &kp N6          &kp N7           &kp N8             &kp N9                 &kp N0            &kp BSPC
+&kp TAB     &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6    &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
 &bt BT_CLR  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH       &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
 &kp LSHFT   &kp TILDE      &none                 &kp AT_SIGN       &kp EXCLAMATION  &kp COMMA        &kp UNDERSCORE  &kp MINUS        &kp PLUS           &kp EQUAL              &none             &trans
                                                  &kp LGUI          &trans           &trans           &trans          &mo 3            &kp RALT
@@ -67,7 +67,7 @@
             bindings = <
 &kp LC(LG(Q))  &none  &kp F9  &kp F8  &kp F7  &kp F12    &kp LC(HOME)      &kp INS          &kp HOME         &kp PAGE_UP      &kp LC(RIGHT)      &kp DEL
 &none          &none  &kp F6  &kp F5  &kp F4  &kp F11    &kp LC(LS(LEFT))  &kp LC(LA(F13))  &kp LC(LA(F14))  &kp LC(LA(F15))  &kp LC(LS(RIGHT))  &none
-&none          &none  &kp F3  &kp F2  &kp F1  &kp F10    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
+&kp LC(LS(T))  &none  &kp F3  &kp F2  &kp F1  &kp F10    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
                               &none   &none   &none      &none             &none            &none
             >;
 
