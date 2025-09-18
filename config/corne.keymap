@@ -71,7 +71,7 @@
             bindings = <
 &kp TAB     &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6    &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
 &bt BT_CLR  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH       &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
-&kp LSHFT   &kp TILDE      &none                 &kp AT_SIGN       &kp EXCLAMATION  &kp COMMA        &kp UNDERSCORE  &kp MINUS        &kp PLUS           &kp EQUAL              &kp COLON         &trans
+&kp LSHFT   &kp TILDE      &none                 &kp AT_SIGN       &kp EXCLAMATION  &kp COLON        &kp UNDERSCORE  &kp MINUS        &kp PLUS           &kp EQUAL              &none             &trans
                                                  &kp LGUI          &mo 4            &trans           &trans          &trans           &kp RALT
             >;
         };
