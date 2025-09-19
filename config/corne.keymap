@@ -111,10 +111,10 @@
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &kp F1  &kp F2      &kp F3            &kp F4       &kp F5     &kp F6        &kp F7        &kp F8      &kp F9        &kp F10  &kp DEL
-&trans         &none   &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT   &kp F11    &kp F12       &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &none    &none
-&kp LC(LS(T))  &none   &none       &none             &pane_close  &tmux      &panesplit_v  &panesplit_h  &none       &none         &none    &trans
-                                   &none             &none        &none      &none         &none         &none
+&kp LC(LG(Q))  &kp F1  &kp F2      &kp F3      &kp F4       &kp F5     &kp F6        &kp F7        &kp F8      &kp F9        &kp F10  &kp DEL
+&trans         &none   &kp C_PREV  &kp C_PLAY  &kp C_NEXT   &kp F11    &kp F12       &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &none    &none
+&kp LC(LS(T))  &none   &none       &none       &pane_close  &tmux      &panesplit_v  &panesplit_h  &none       &none         &none    &trans
+                                   &none       &none        &none      &none         &none         &none
             >;
 
             label = "Func";
