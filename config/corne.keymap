@@ -46,6 +46,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        caps {
+            bindings = <&caps_word>;
+            key-positions = <36 41>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
