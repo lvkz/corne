@@ -69,10 +69,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6    &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
-&bt BT_CLR  &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH       &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
-&kp LSHFT   &kp TILDE      &none                 &kp AT_SIGN       &kp EXCLAMATION  &kp COLON        &kp UNDERSCORE  &kp MINUS        &kp PLUS           &kp EQUAL              &none             &trans
-                                                 &kp LGUI          &mo 4            &trans           &trans          &trans           &kp RALT
+&kp TAB    &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6  &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
+&trans     &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
+&kp LSHFT  &kp TILDE      &none                 &kp AT_SIGN       &kp EXCLAMATION  &kp COLON        &kp QUESTION  &kp LS(MINUS)    &kp MINUS          &kp PLUS               &kp EQUAL         &trans
+                                                &kp LGUI          &mo 4            &trans           &trans        &trans           &kp RALT
             >;
         };
 
@@ -87,7 +87,7 @@
 
             bindings = <
 &kp TAB    &none  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &panesplit_v    &kp KP_NUMBER_0  &kp DOLLAR            &kp LG(LS(E))  &none         &none  &kp BSPC
-&kp LCTRL  &none  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &panesplit_h    &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT     &none  &none
+&trans     &none  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &panesplit_h    &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT     &none  &none
 &kp LSHFT  &none  &none         &none             &tmux         &pane_close     &kp LG(SPACE)    &kp LS(LG(NUMBER_4))  &kp LC(UP)     &kp LC(DOWN)  &none  &trans
                                 &kp LGUI          &trans        &trans          &trans           &mo 3                 &kp RALT
             >;
