@@ -51,7 +51,7 @@
 
         caps {
             bindings = <&mo 5>;
-            key-positions = <36 41>;
+            key-positions = <41 40>;
         };
     };
 
