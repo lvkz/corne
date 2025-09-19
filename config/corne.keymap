@@ -37,6 +37,13 @@
             bindings = <&kp LC(SPACE)>;
             label = "GOTO_PANE_1";
         };
+
+        apps: applications {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp LG(NUMBER_1)>;
+            label = "APPLICATIONS";
+        };
     };
 
     keymap {
@@ -70,7 +77,7 @@
 
             bindings = <
 &kp TAB    &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6  &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
-&trans     &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
+&kp AMPS   &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
 &kp LSHFT  &kp TILDE      &kp HASH              &kp AT_SIGN       &kp EXCLAMATION  &kp COLON        &kp QUESTION  &kp LS(MINUS)    &kp MINUS          &kp PLUS               &kp EQUAL         &trans
                                                 &kp LGUI          &mo 4            &trans           &trans        &trans           &kp RALT
             >;
@@ -86,22 +93,22 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &none  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &panesplit_v    &kp KP_NUMBER_0  &kp DOLLAR            &kp LG(LS(E))  &none         &none  &kp BSPC
-&trans     &none  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &panesplit_h    &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT     &none  &none
-&kp LSHFT  &none  &none         &none             &tmux         &pane_close     &kp LG(SPACE)    &kp LS(LG(NUMBER_4))  &kp LC(UP)     &kp LC(DOWN)  &none  &trans
-                                &kp LGUI          &trans        &trans          &trans           &mo 3                 &kp RALT
+&kp TAB    &none  &kp LC(LEFT)     &kp LC(RIGHT)      &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))    &kp KP_NUMBER_0  &kp DOLLAR            &kp LG(LS(E))  &kp LG(SPACE)  &none  &kp BSPC
+&trans     &none  &kp LC(LA(F13))  &kp LC(LA(F14))    &kp LC(LA(F15))   &kp LC(LA(C))        &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT      &none  &none
+&kp LSHFT  &none  &none            &kp LC(LA(ENTER))  &kp LC(LA(LEFT))  &kp LC(LA(RIGHT))    &apps            &kp LS(LG(NUMBER_4))  &kp LC(UP)     &kp LC(DOWN)   &none  &trans
+                                   &kp LGUI           &trans            &trans               &trans           &mo 3                 &kp RALT
             >;
         };
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &kp F12  &kp F11  &kp F10  &kp F9  &kp LC(LA(C))        &kp LC(LEFT)      &kp INS          &kp HOME         &kp PAGE_UP      &kp LC(RIGHT)      &kp DEL
-&trans         &kp F8   &kp F7   &kp F6   &kp F5  &kp LC(LA(ENTER))    &kp LC(LS(LEFT))  &kp LC(LA(F13))  &kp LC(LA(F14))  &kp LC(LA(F15))  &kp LC(LS(RIGHT))  &kp LC(LA(DEL))
-&kp LC(LS(T))  &kp F4   &kp F3   &kp F2   &kp F1  &kp LG(BACKSPACE)    &kp LC(LA(LEFT))  &kp DEL          &kp END          &kp PAGE_DOWN    &kp LC(LA(RIGHT))  &trans
-                                 &none    &none   &none                &none             &none            &none
+&kp LC(LG(Q))  &kp F1  &kp F2      &kp F3            &kp F4       &kp F5     &kp F6        &kp F7        &kp F8      &kp F9        &kp F10  &kp DEL
+&trans         &none   &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT   &kp F11    &kp F12       &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &none    &none
+&kp LC(LS(T))  &none   &none       &none             &pane_close  &tmux      &panesplit_v  &panesplit_h  &none       &none         &none    &trans
+                                   &none             &none        &none      &none         &none         &none
             >;
 
-            label = "Function";
+            label = "Func";
         };
 
         extra_layer {
