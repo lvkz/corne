@@ -103,7 +103,7 @@
 
             bindings = <
 &kp TAB    &none               &kp LC(LEFT)     &kp LC(RIGHT)      &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))    &kp KP_NUMBER_0  &kp DOLLAR            &kp LG(LS(E))  &kp LG(SPACE)  &none  &kp LG(BSPC)
-&trans     &kp LC(LA(DELETE))  &kp LC(LA(F13))  &kp LC(LA(F14))    &kp LC(LA(F15))   &kp LC(LA(C))        &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT      &none  &none
+&trans     &kp LC(LA(INSERT))  &kp LC(LA(F13))  &kp LC(LA(F14))    &kp LC(LA(F15))   &kp LC(LA(C))        &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT      &none  &none
 &kp LSHFT  &none               &none            &kp LC(LA(ENTER))  &kp LC(LA(LEFT))  &kp LC(LA(RIGHT))    &apps            &kp LS(LG(NUMBER_4))  &kp LC(UP)     &kp LC(DOWN)   &none  &trans
                                                 &kp LGUI           &trans            &trans               &trans           &mo 3                 &kp RALT
             >;
