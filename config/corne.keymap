@@ -44,6 +44,34 @@
             bindings = <&kp LG(SPACE) &kp LG(NUMBER_1)>;
             label = "APPLICATIONS";
         };
+
+        resize_left: resize_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp H>;
+            label = "RESIZE_LEFT";
+        };
+
+        resize_down: resize_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp J>;
+            label = "RESIZE_DOWN";
+        };
+
+        resize_up: resize_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp K>;
+            label = "RESIZE_UP";
+        };
+
+        resize_right: resize_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp K>;
+            label = "RESIZE_RIGHT";
+        };
     };
 
     combos {
@@ -111,10 +139,10 @@
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &kp F1  &kp F2      &kp F3      &kp F4       &kp F5     &kp F6        &kp F7        &kp F8      &kp F9        &kp F10  &kp DEL
-&trans         &none   &kp C_PREV  &kp C_PLAY  &kp C_NEXT   &kp F11    &kp F12       &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &none    &none
-&kp LC(LS(T))  &none   &none       &none       &pane_close  &tmux      &panesplit_v  &panesplit_h  &none       &none         &none    &trans
-                                   &none       &none        &none      &none         &none         &none
+&kp LC(LG(Q))  &kp F1        &kp F2      &kp F3      &kp F4       &kp F5     &kp F6        &kp F7        &kp F8      &kp F9         &kp F10  &kp DEL
+&trans         &kp C_VOL_UP  &kp C_PREV  &kp C_PLAY  &kp C_NEXT   &kp F11    &resize_left  &resize_down  &resize_up  &resize_right  &kp F11  &none
+&kp LC(LS(T))  &kp C_VOL_DN  &kp C_MUTE  &none       &pane_close  &tmux      &panesplit_v  &panesplit_h  &none       &none          &kp F12  &trans
+                                         &none       &none        &none      &none         &none         &none
             >;
 
             label = "Func";
