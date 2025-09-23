@@ -69,8 +69,15 @@
         resize_right: resize_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp K>;
+            bindings = <&kp LC(SPACE) &kp L>;
             label = "RESIZE_RIGHT";
+        };
+
+        max_pane: max_pane {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(SPACE) &kp M>;
+            label = "MAX_PANE";
         };
     };
 
@@ -139,10 +146,10 @@
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &kp F1        &kp F2      &kp F3      &kp F4       &kp F5    &kp F6        &kp F7        &kp F8      &kp F9         &kp F10  &kp DEL
-&trans         &kp C_VOL_UP  &kp C_PREV  &kp C_PLAY  &kp C_NEXT   &none     &resize_left  &resize_down  &resize_up  &resize_right  &kp F11  &none
-&kp LC(LS(T))  &kp C_VOL_DN  &kp C_MUTE  &none       &pane_close  &tmux     &panesplit_v  &panesplit_h  &none       &none          &kp F12  &trans
-                                         &none       &none        &none     &none         &none         &none
+&kp LC(LG(Q))  &kp F1        &kp F2      &kp F3      &kp F4       &kp F5       &kp F6        &kp F7        &kp F8      &kp F9         &kp F10  &kp DEL
+&trans         &kp C_VOL_UP  &kp C_PREV  &kp C_PLAY  &kp C_NEXT   &max_pane    &resize_left  &resize_down  &resize_up  &resize_right  &kp F11  &none
+&kp LC(LS(T))  &kp C_VOL_DN  &kp C_MUTE  &none       &pane_close  &tmux        &panesplit_v  &panesplit_h  &none       &none          &kp F12  &trans
+                                         &none       &none        &none        &none         &none         &none
             >;
 
             label = "Func";
