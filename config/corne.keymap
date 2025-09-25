@@ -88,6 +88,36 @@
             bindings = <&mo 5>;
             key-positions = <41 40>;
         };
+
+        left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <5 4>;
+        };
+
+        right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <6 7>;
+        };
+
+        left_bracket1 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <16 17>;
+        };
+
+        right_bracket1 {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <18 19>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <29 28>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <30 31>;
+        };
     };
 
     keymap {
