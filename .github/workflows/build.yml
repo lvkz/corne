@@ -1,5 +1,9 @@
 name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -7,7 +11,7 @@ jobs:
     strategy:
       matrix:
         include:
-          # nice!nano v2 Corne + nice!view
+          # Corne with nice!nano v2 + nice!view
           - board: nice_nano_v2
             shield: corne_left nice_view_adapter nice_view
             artifact-name: corne_left_nicenano
@@ -18,7 +22,7 @@ jobs:
             shield: settings_reset
             artifact-name: settings_reset_nicenano
 
-          # Raspberry Pi Pico Corne
+          # Corne with Raspberry Pi Pico (RP2040)
           - board: rpi_pico
             shield: corne_left
             artifact-name: corne_left_pico
@@ -30,8 +34,8 @@ jobs:
             artifact-name: settings_reset_pico
 
     steps:
-      - name: Checkout config
-        uses: actions/checkout@v3
+      - name: Checkout config repo
+        uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
@@ -41,8 +45,7 @@ jobs:
             python3-wheel xz-utils file make gcc g++ git
 
       - name: Install west + deps
-        run: |
-          pip3 install west
+        run: pip3 install west
 
       - name: Init Zephyr + ZMK
         run: |
@@ -54,7 +57,8 @@ jobs:
       - name: Build ${{ matrix.artifact-name }}
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- \
-            -DSHIELD=${{ matrix.shield }} -DZMK_CONFIG=${{ github.workspace }}/config
+            -DSHIELD="${{ matrix.shield }}" \
+            -DZMK_CONFIG=${{ github.workspace }}/config
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
