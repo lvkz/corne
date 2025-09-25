@@ -27,13 +27,12 @@ include:
     artifact-name: settings_reset_nicenano
 
   # Corne with Raspberry Pi Pico (RP2040)
-  - board: raspberrypi_pico
+  - board: rpi_pico
     shield: corne_left
-    snippet: studio-rpc-usb-uart
     artifact-name: corne_left_pico
-  - board: raspberrypi_pico
+  - board: rpi_pico
     shield: corne_right
     artifact-name: corne_right_pico
-  - board: raspberrypi_pico
+  - board: rpi_pico
     shield: settings_reset
     artifact-name: settings_reset_pico
