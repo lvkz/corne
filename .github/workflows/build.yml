@@ -75,7 +75,7 @@ jobs:
           west build -s zmk/app -b ${{ matrix.board }} -- \
             -DSHIELD="${{ matrix.shield }}" \
             -DZMK_CONFIG=${{ github.workspace }}/config \
-            -DBOARD_ROOT=${{ github.workspace }}
+            -DBOARD_ROOT="${{ github.workspace }};${{ github.workspace }}/zmk"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
