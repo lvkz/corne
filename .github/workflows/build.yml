@@ -37,6 +37,22 @@ jobs:
       - name: Checkout config repo
         uses: actions/checkout@v4
 
+      - name: Cache west modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.west
+          key: ${{ runner.os }}-west-${{ hashFiles('west.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-west-
+
+      - name: Cache ccache
+        uses: actions/cache@v4
+        with:
+          path: ~/.ccache
+          key: ${{ runner.os }}-ccache-${{ matrix.board }}-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-ccache-${{ matrix.board }}-
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -49,7 +65,7 @@ jobs:
 
       - name: Init Zephyr + ZMK
         run: |
-          west init -l config
+          west init -l .
           west update
           west zephyr-export
           pip3 install -r zephyr/scripts/requirements.txt
@@ -58,7 +74,7 @@ jobs:
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- \
             -DSHIELD="${{ matrix.shield }}" \
-            -DZMK_CONFIG=${{ github.workspace }}/config
+            -DZMK_CONFIG=${{ github.workspace }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
