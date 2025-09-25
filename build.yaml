@@ -14,10 +14,20 @@
 #
 ---
 include:
+  # Corne with nice!nano v2 + nice!view
   - board: nice_nano_v2
     shield: corne_left nice_view_adapter nice_view
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
   - board: nice_nano_v2
+    shield: settings_reset
+
+  # Corne with Raspberry Pi Pico (RP2040)
+  - board: raspberry_pi_pico
+    shield: corne_left
+    snippet: studio-rpc-usb-uart
+  - board: raspberry_pi_pico
+    shield: corne_right
+  - board: raspberry_pi_pico
     shield: settings_reset
