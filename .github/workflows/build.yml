@@ -65,7 +65,7 @@ jobs:
 
       - name: Init Zephyr + ZMK
         run: |
-          west init -l .
+          west init -l config
           west update
           west zephyr-export
           pip3 install -r zephyr/scripts/requirements.txt
@@ -74,7 +74,8 @@ jobs:
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- \
             -DSHIELD="${{ matrix.shield }}" \
-            -DZMK_CONFIG=${{ github.workspace }}
+            -DZMK_CONFIG=${{ github.workspace }}/config \
+            -DBOARD_ROOT=${{ github.workspace }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
