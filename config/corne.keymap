@@ -133,27 +133,20 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 2  &kp ENTER    &kp SPACE  &mo 1  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U          &kp I      &kp O    &kp P     &kp ESC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                         &kp LGUI  &mo 2  &kp ENTER    &kp SPACE  &kp BACKSPACE  &mo 1
             >;
         };
 
-        lower_layer {
+        lower_layer_alt {
             display-name = "# and $";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&kp TAB    &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6  &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
-&kp AMPS   &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
-&kp LSHFT  &kp TILDE      &kp HASH              &kp AT_SIGN       &kp EXCLAMATION  &kp COLON        &kp QUESTION  &kp LS(MINUS)    &kp MINUS          &kp PLUS               &kp EQUAL         &kp ASTERISK
-                                                &kp LGUI          &mo 4            &trans           &trans        &trans           &kp RALT
+&kp TAB    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp CARET       &kp AMPERSAND  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BACKSLASH
+&kp AMPS   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp MINUS       &kp EQUAL      &kp GRAVE  &kp LBKT  &kp RBKT  &kp PIPE
+&kp LSHFT  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp LBRC  &kp RBRC  &kp ASTERISK
+                                          &kp LGUI      &mo 4         &trans          &trans          &trans         &trans
             >;
         };
 
@@ -170,15 +163,15 @@
 &kp TAB    &kp LC(LA(INS))      &kp LC(LEFT)     &kp LC(RIGHT)      &kp LC(LS(LEFT))  &kp LC(LS(RIGHT))    &kp KP_NUMBER_0  &kp DOLLAR            &kp LG(LS(E))  &kp LG(SPACE)  &kp LC(LA(DEL))        &kp LG(BSPC)
 &trans     &kp LC(LA(HOME))     &kp LC(LA(F13))  &kp LC(LA(F14))    &kp LC(LA(F15))   &kp LC(LA(C))        &kp LEFT         &kp DOWN              &kp UP         &kp RIGHT      &kp LC(LA(END))        &kp LC(LG(LA(SPACE)))
 &kp LSHFT  &kp LC(LA(PAGE_UP))  &none            &kp LC(LA(ENTER))  &kp LC(LA(LEFT))  &kp LC(LA(RIGHT))    &apps            &kp LS(LG(NUMBER_4))  &kp LC(UP)     &kp LC(DOWN)   &kp LC(LA(PAGE_DOWN))  &trans
-                                                 &kp LGUI           &trans            &trans               &trans           &mo 3                 &kp RALT
+                                                 &kp LGUI           &trans            &trans               &trans           &kp BACKSPACE         &mo 3
             >;
         };
 
         function_layer {
             bindings = <
-&kp LC(LG(Q))  &kp F1        &kp F2      &kp F3      &kp F4       &kp F5       &kp F6        &kp F7        &kp F8      &kp F9         &kp F10  &kp DEL
+&kp LC(LG(Q))  &kp F1        &kp F2      &kp F3      &kp F4       &kp F5       &kp F6        &kp F7        &kp F8      &kp F9         &kp F10  &trans
 &trans         &kp C_VOL_UP  &kp C_PREV  &kp C_PLAY  &kp C_NEXT   &max_pane    &resize_left  &resize_down  &resize_up  &resize_right  &kp F11  &none
-&kp LC(LS(T))  &kp C_VOL_DN  &kp C_MUTE  &none       &pane_close  &tmux        &panesplit_v  &panesplit_h  &none       &none          &kp F12  &trans
+&kp LC(LS(T))  &kp C_VOL_DN  &kp C_MUTE  &none       &pane_close  &tmux        &panesplit_v  &panesplit_h  &none       &none          &kp F12  &none
                                          &none       &none        &none        &none         &none         &none
             >;
 
@@ -205,6 +198,23 @@
             >;
 
             label = "All Caps";
+        };
+
+        lower_layer {
+            display-name = "# and $";
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp TAB    &kp NUMBER_1   &kp NUMBER_2          &kp NUMBER_3      &kp NUMBER_4     &kp N5           &kp NUMBER_6  &kp NUMBER_7     &kp NUMBER_8       &kp NUMBER_9           &kp NUMBER_0      &kp BSPC
+&kp AMPS   &kp LESS_THAN  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp LEFT_BRACE   &kp BACKSLASH    &kp SLASH     &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp GREATER_THAN  &kp GRAVE
+&kp LSHFT  &kp TILDE      &kp HASH              &kp AT_SIGN       &kp EXCLAMATION  &kp COLON        &kp QUESTION  &kp LS(MINUS)    &kp MINUS          &kp PLUS               &kp EQUAL         &kp ASTERISK
+                                                &kp LGUI          &mo 4            &trans           &trans        &trans           &kp RALT
+            >;
         };
     };
 };
