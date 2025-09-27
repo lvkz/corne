@@ -41,7 +41,11 @@
         apps: applications {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp LG(NUMBER_1)>;
+            bindings =
+                <&kp LG(SPACE)>,
+                <&macro_wait_time 200>,
+                <&kp LG(NUMBER_1)>;
+
             label = "APPLICATIONS";
         };
 
