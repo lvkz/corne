@@ -118,6 +118,11 @@
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <30 31>;
         };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <36 37>;
+        };
     };
 
     keymap {
