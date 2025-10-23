@@ -83,6 +83,13 @@
             bindings = <&kp LC(SPACE) &kp M>;
             label = "MAX_PANE";
         };
+
+        delete_word: delete_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(BACKSPACE)>;
+            label = "DELETE_WORD";
+        };
     };
 
     combos {
@@ -129,7 +136,7 @@
         };
 
         delete_word {
-            bindings = <&kp LA(BACKSPACE)>;
+            bindings = <&delete_word>;
             key-positions = <37 41>;
         };
     };
