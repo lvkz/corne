@@ -127,6 +127,11 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <36 12>;
         };
+
+        delete_word {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <37 41>;
+        };
     };
 
     keymap {
