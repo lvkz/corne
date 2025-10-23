@@ -83,13 +83,6 @@
             bindings = <&kp LC(SPACE) &kp M>;
             label = "MAX_PANE";
         };
-
-        delete_word: delete_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(BACKSPACE)>;
-            label = "DELETE_WORD";
-        };
     };
 
     combos {
@@ -134,11 +127,6 @@
             bindings = <&kp LEFT_ALT>;
             key-positions = <36 12>;
         };
-
-        delete_word {
-            bindings = <&delete_word>;
-            key-positions = <37 41>;
-        };
     };
 
     keymap {
@@ -163,10 +151,10 @@
 
         lower {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7         &kp F8            &kp F9          &kp F10    &trans
-&trans  &none   &none   &kp LA(E)  &kp LA(N)  &kp N0        &kp LEFT  &kp DOWN       &kp UP_ARROW      &kp RIGHT       &kp F11    &kp F12
-&trans  &none   &none   &none      &tmux      &kp DOLLAR    &apps     &kp LG(SPACE)  &kp LS(LG(DOWN))  &kp LS(LG(UP))  &kp LG(E)  &kp LG(LS(NUMBER_4))
-                        &none      &trans     &none         &none     &mo 3          &none
+&trans  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7         &kp F8             &kp F9          &kp F10    &trans
+&trans  &none   &none   &kp LA(E)  &kp LA(N)  &kp N0        &kp LEFT  &kp DOWN       &kp UP_ARROW       &kp RIGHT       &kp F11    &kp F12
+&trans  &none   &none   &none      &tmux      &kp DOLLAR    &apps     &kp LG(SPACE)  &kp LS(LG(DOWN))   &kp LS(LG(UP))  &kp LG(E)  &kp LG(LS(NUMBER_4))
+                        &none      &trans     &none         &none     &mo 3          &kp LA(BACKSPACE)
             >;
 
             label = "Nav";
