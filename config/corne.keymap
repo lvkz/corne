@@ -158,7 +158,7 @@
 
         lower {
             bindings = <
-&kp LC(LG(Q))  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7         &kp F8             &kp F9        &kp F10     &trans
+&kp LC(LG(Q))  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7         &kp F8             &kp F9        &kp F10     &force_quit
 &trans         &none   &none   &kp LA(E)  &kp LA(N)  &kp N0        &kp LEFT  &kp DOWN       &kp UP_ARROW       &kp RIGHT     &kp F11     &kp F12
 &trans         &none   &none   &none      &tmux      &kp DOLLAR    &apps     &kp LG(SPACE)  &kp LG(MINUS)      &kp LG(PLUS)  &kp LG(N0)  &kp LG(LS(NUMBER_4))
                                &none      &trans     &none         &none     &mo 3          &kp LA(BACKSPACE)
