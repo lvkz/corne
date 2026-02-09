@@ -43,7 +43,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LG(SPACE)>,
-                <&macro_wait_time 200>,
+                <&macro_wait_time 300>,
                 <&kp LG(NUMBER_1)>;
 
             label = "APPLICATIONS";
