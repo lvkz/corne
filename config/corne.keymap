@@ -43,9 +43,12 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
+                <&kp ESC>,
+                <&macro_wait_time 100>,
                 <&kp LG(SPACE)>,
-                <&macro_wait_time 300>,
-                <&kp LG(NUMBER_1)>;
+                <&macro_wait_time 450>,
+                <&kp LG(NUMBER_1)>,
+                <&macro_press>;
 
             label = "APPLICATIONS";
         };
@@ -161,7 +164,7 @@
             bindings = <
 &kp LC(LG(Q))  &kp F1  &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7         &kp F8             &kp F9        &kp F10     &force_quit
 &trans         &none   &none   &kp LA(E)  &kp LA(N)  &kp N0        &kp LEFT  &kp DOWN       &kp UP_ARROW       &kp RIGHT     &kp F11     &kp F12
-&trans         &none   &none   &none      &tmux      &kp DOLLAR    &apps     &kp LG(SPACE)  &kp LG(MINUS)      &kp LG(PLUS)  &kp LG(N0)  &kp LG(LS(NUMBER_4))
+&trans         &none   &none   &none      &tmux      &kp DOLLAR    &kp F16   &kp LG(SPACE)  &kp LG(MINUS)      &kp LG(PLUS)  &kp LG(N0)  &kp LG(LS(NUMBER_4))
                                &none      &trans     &none         &none     &mo 3          &kp LA(BACKSPACE)
             >;
 
