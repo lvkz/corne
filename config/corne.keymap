@@ -183,10 +183,10 @@
 
         extra_layer {
             bindings = <
-&none       &none         &none         &none         &none         &bootloader     &bootloader  &none  &none  &none  &none  &force_quit
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none        &none  &none  &none  &none  &none
-&none       &none         &none         &none         &none         &none           &none        &none  &none  &none  &none  &none
-                                        &none         &none         &none           &none        &none  &none
+&bootloader  &none         &none         &none         &none         &none           &kp LA(LC(P))            &kp LC(LA(N))      &none                   &none       &none              &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LS(LA(LC(LG(F14))))  &kp LA(LC(LS(C)))  &kp LA(LC(ENTER))       &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&none        &none         &none         &none         &none         &none           &kp LA(LC(LEFT_ARROW))   &kp LA(LC(F13))    &kp LC(LS(LEFT_ARROW))  &kp K_PREV  &kp K_PLAY_PAUSE   &kp K_NEXT
+                                         &none         &none         &none           &none                    &none              &none
             >;
 
             label = "Extra";
