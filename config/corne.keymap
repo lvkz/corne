@@ -169,10 +169,10 @@
 
         lower {
             bindings = <
-&kp LC(LG(Q))  &kp F1             &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7         &kp F8             &kp F9         &kp F10     &force_quit
-&trans         &none              &none   &kp LA(E)  &kp LA(N)  &kp N0        &kp LEFT  &kp DOWN       &kp UP_ARROW       &kp RIGHT      &kp F11     &kp F12
-&kp LEFT_ALT   &kp LG(LC(SPACE))  &none   &none      &tmux      &kp DOLLAR    &kp F16   &kp LG(SPACE)  &kp LG(MINUS)      &kp LG(EQUAL)  &kp LG(N0)  &kp LG(LS(NUMBER_4))
-                                          &none      &trans     &none         &none     &mo 3          &kp LA(BACKSPACE)
+&kp LC(LG(Q))  &kp F1             &kp F2  &kp F3     &kp F4     &kp F5        &kp F6    &kp F7    &kp F8             &kp F9         &kp F10     &force_quit
+&trans         &none              &none   &kp LA(E)  &kp LA(N)  &kp N0        &kp LEFT  &kp DOWN  &kp UP_ARROW       &kp RIGHT      &kp F11     &kp F12
+&kp LEFT_ALT   &kp LG(LC(SPACE))  &none   &none      &tmux      &kp DOLLAR    &kp F16   &kp F18   &kp LG(MINUS)      &kp LG(EQUAL)  &kp LG(N0)  &kp LG(LS(NUMBER_4))
+                                          &none      &trans     &none         &none     &mo 3     &kp LA(BACKSPACE)
             >;
 
             label = "Nav";
