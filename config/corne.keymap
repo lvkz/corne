@@ -127,7 +127,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <11 13 16 15 14 26 27 28 29 17 25 24 1 2 3 4 5>;
+            hold-trigger-key-positions = <11 13 16 15 14 26 27 28 29 17 25 24 1 2 3 4 5 12 0 39 38 30 18 20 21 19 9 8 7 6>;
             tapping-term-ms = <200>;
             require-prior-idle-ms = <150>;
             flavor = "balanced";
@@ -238,10 +238,10 @@
 
         Workspaces {
             bindings = <
-&trans  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(N1))  &kp LG(LA(N2))  &kp LG(LA(N3))  &kp LG(LA(RIGHT))    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(N1)              &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(N6)              &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)           &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans          &trans          &trans               &trans  &trans  &trans
+&kp LG(LS(LEFT))   &kp LG(LC(LEFT_ARROW))  &kp LG(LA(N1))  &kp LG(LA(N2))  &kp LG(LA(N3))  &kp LG(LC(RIGHT))    &kp LA(LEFT)       &kp LA(DOWN)      &kp LA(UP)      &kp LA(RIGHT)      &trans  &trans
+&kp LG(LS(RIGHT))  &kp LG(N1)              &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)           &kp LC(LA(LEFT))   &kp LC(LA(DOWN))  &kp LC(LA(UP))  &kp LC(LA(RIGHT))  &trans  &trans
+&trans             &kp LG(N6)              &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)           &kp LG(LA(COMMA))  &trans            &trans          &trans             &trans  &trans
+                                                           &trans          &trans          &kp LG(SPACE)        &kp LG(LA(SPACE))  &trans            &trans
             >;
         };
     };
