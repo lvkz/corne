@@ -106,6 +106,18 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        move_to_workspace: move_to_workspace {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOVE_TO_WORKSPACE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <11 13 16 15 14 26 27 28 29 17 25 24>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -208,6 +220,15 @@
             >;
 
             label = "All Caps";
+        };
+
+        Workspaces {
+            bindings = <
+&trans  &trans      &trans      &trans      &trans      &trans        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans      &trans      &trans        &trans  &trans  &trans
+            >;
         };
     };
 };
