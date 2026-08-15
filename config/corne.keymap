@@ -207,10 +207,10 @@
         raise {
             display-name = "# and $";
             bindings = <
-&trans          &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp CARET       &kp AMPERSAND  &kp ASTRK  &kp LPAR  &kp RPAR  &kp BACKSLASH
-&trans          &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp MINUS       &kp EQUAL      &kp GRAVE  &kp LBKT  &kp RBKT  &kp PIPE
-&kp LEFT_SHIFT  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp LBRC  &kp RBRC  &kp ASTERISK
-                                               &kp LGUI      &mo 3         &trans          &trans          &trans         &trans
+&trans          &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp CARET       &kp AMPERSAND  &kp ASTRK   &kp LPAR  &kp RPAR  &kp BACKSLASH
+&trans          &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp MINUS       &kp EQUAL      &kp GRAVE   &kp LBKT  &kp RBKT  &kp PIPE
+&kp LEFT_SHIFT  &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp UNDERSCORE  &kp PLUS       &kp TILDE   &kp LBRC  &kp RBRC  &kp ASTERISK
+                                               &kp LGUI      &mo 3         &trans          &trans          &trans         &kp DELETE
             >;
         };
 
