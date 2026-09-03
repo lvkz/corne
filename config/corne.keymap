@@ -145,7 +145,7 @@
         compatible = "zmk,combos";
 
         caps {
-            bindings = <&mo 4>;
+            bindings = <&mo 0>;
             key-positions = <41 40>;
         };
 
@@ -193,7 +193,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y                                &kp U  &kp I          &kp O    &kp P     &move_to_workspace 5 ESC
+&kp TAB         &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y                                &kp U  &kp I          &kp O    &kp P     &move_to_workspace 4 ESC
 &kp LCTRL       &kp A  &kp S  &kp D     &kp F  &kp G        &kp H                                &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N                                &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                               &kp LGUI  &mo 1  &kp ENTER    &hyper_space LS(LC(LA(LGUI))) SPACE  &mo 2  &kp BACKSPACE
@@ -221,7 +221,7 @@
             >;
         };
 
-        extra_layer {
+        Miscelaneous {
             bindings = <
 &bootloader  &none         &none         &none         &none         &none           &kp LA(LC(P))           &kp LC(LA(C))            &kp LA(LC(ENTER))  &none       &none              &bootloader
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LC(LA(LEFT_ARROW))  &kp LA(LC(LS(LG(F14))))  &kp LA(LC(RIGHT))  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
@@ -229,27 +229,18 @@
                                          &none         &none         &none           &none                   &none                    &none
             >;
 
-            label = "Extra";
+            label = "Misc";
         };
 
-        letter_caps {
+        Omarchy {
             bindings = <
-&trans  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)    &kp LS(Y)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)  &trans
-&trans  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)    &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp SEMI   &kp APOS
-&trans  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)    &kp LS(N)  &kp LS(M)  &kp COMMA  &kp DOT    &trans     &trans
-                              &trans     &trans     &trans       &trans     &trans     &trans
+&kp LG(LS(LEFT))   &kp LG(LC(LEFT_ARROW))  &kp LG(LEFT_ARROW)  &kp LG(LA(G))  &kp LG(RIGHT)  &kp LG(LC(RIGHT))    &kp LA(LEFT)       &kp LA(DOWN)      &kp LA(UP)      &kp LA(RIGHT)      &trans  &trans
+&kp LG(LS(RIGHT))  &kp LG(N1)              &kp LG(N2)          &kp LG(N3)     &kp LG(N4)     &kp LG(N5)           &kp LC(LA(LEFT))   &kp LC(LA(DOWN))  &kp LC(LA(UP))  &kp LC(LA(RIGHT))  &trans  &trans
+&trans             &kp LG(N6)              &kp LG(N7)          &kp LG(N8)     &kp LG(N9)     &kp LG(N0)           &kp LG(LA(COMMA))  &trans            &trans          &trans             &trans  &trans
+                                                               &trans         &trans         &kp LG(SPACE)        &kp LG(LA(SPACE))  &trans            &trans
             >;
 
-            label = "All Caps";
-        };
-
-        Workspaces {
-            bindings = <
-&kp LG(LS(LEFT))   &kp LG(LC(LEFT_ARROW))  &kp LG(LA(N1))  &kp LG(LA(N2))  &kp LG(LA(N3))  &kp LG(LC(RIGHT))    &kp LA(LEFT)       &kp LA(DOWN)      &kp LA(UP)      &kp LA(RIGHT)      &trans  &trans
-&kp LG(LS(RIGHT))  &kp LG(N1)              &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)           &kp LC(LA(LEFT))   &kp LC(LA(DOWN))  &kp LC(LA(UP))  &kp LC(LA(RIGHT))  &trans  &trans
-&trans             &kp LG(N6)              &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)           &kp LG(LA(COMMA))  &trans            &trans          &trans             &trans  &trans
-                                                           &trans          &trans          &kp LG(SPACE)        &kp LG(LA(SPACE))  &trans            &trans
-            >;
+            label = "Omarchy";
         };
     };
 };
